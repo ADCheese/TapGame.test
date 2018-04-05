@@ -32,13 +32,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == text1 {
         playerlabel.text = text1.text
-        playerlabel2.text = text2.text
-        self.text1.alpha = 0
-        self.text2.alpha = 0
-        player.play()
-       return true
-        
+             self.text1.alpha = 0
+            self.player.play()
+            return true
+        }else{
+            playerlabel2.text = text2.text
+            self.text2.alpha = 0
+            
+            
+        }
+        return true
         
     
 }
